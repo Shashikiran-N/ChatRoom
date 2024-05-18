@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+<form method="post" class="buttons">
+    <div class="home">
+        <h1>Welcome to the Chat Room</h1>
+        <p>
+            This is a simple chat room application built with Flask and Socket.IO.
+        </p>
+
+        <label>Name:</label>
+        <input type="text" placeholder="Pick a Name!" name="name" value="{{name}}" />
+    </div>
+    <div class="join">
+        <p>
+            To get started, Enter Code and Click the button below to join the chat room.
+        </p>
+        <input type="text" placeholder="Room Code" name="code" value="{{code}}"/>
+        <button type="submit" name="join">Join Room</button>
+    </div>
+    <button type="submit" name="create" class="create-btn">Create a Room</button>
+    {% if error %}
+    <ul>
+        <li>{{error}}</li>
+    </ul>
+    {% endif %}
+</form>
+{% endblock %}

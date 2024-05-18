@@ -16,3 +16,6 @@ def home():
 
 if __name__ == '__main__':
     socketio.run(app, debug=True, use_reloader=False)
+
+# how to remove certain files from git
+# git rm --cached filename
